@@ -22,7 +22,7 @@ body {
 #musicControl {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 2px;
     background: rgba(255, 255, 255, 0.2);
     border: none;
     border-radius: 50%;
@@ -244,4 +244,29 @@ body {
     margin-top: 60px;
     color: white;
     font-size: 18px;
+}
+
+/* Heart Animation Styles */
+.heart {
+    position: fixed;
+    font-size: 20px;
+    user-select: none;
+    cursor: default;
+    z-index: 9999;
+    animation: heartFloat 4s ease-in-out forwards;
+}
+
+@keyframes heartFloat {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-100px) scale(1.5);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-200px) scale(0.5);
+        opacity: 0;
+    }
 }
