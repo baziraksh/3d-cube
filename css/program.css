@@ -14,7 +14,7 @@ body {
     height: 95vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 9px;
 }
@@ -22,11 +22,14 @@ body {
 .title {
     color: rgb(238, 255, 255);
     text-align: center;
-    text-shadow: /* 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135 */;
+    text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
     font-size: 1.2rem;
     font-weight: 800;
     letter-spacing: 11px;
-    margin-top: -200px !important;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     text-transform: uppercase;
     /* justify-self: flex-start; */
 }
@@ -34,7 +37,7 @@ body {
 .cube {
     position: relative;
     margin: 0px auto;
-    margin-top: 15%;
+    margin-top: 250px;
     /* margin-left: 42%; */
     width: 200px;
     height: 200px;
