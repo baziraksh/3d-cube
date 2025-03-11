@@ -94,6 +94,22 @@
 				audio.play();
 			}
 		}, { once: true });
+
+		// Heart touch effect
+		document.addEventListener('click', function(e) {
+			const hearts = ['❤️', '💖', '💗', '💓', '💝', '💘'];
+			const heart = document.createElement('div');
+			heart.className = 'heart';
+			heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+			heart.style.left = (e.clientX - 10) + 'px';
+			heart.style.top = (e.clientY - 10) + 'px';
+			document.body.appendChild(heart);
+
+			// Remove the heart element after animation
+			heart.addEventListener('animationend', function() {
+				heart.remove();
+			});
+		});
 	</script>
 </body>
 
