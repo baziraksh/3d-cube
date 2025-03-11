@@ -11,6 +11,13 @@
 </head>
 
 <body>
+	<audio id="bgMusic" autoplay loop>
+		<source src="./bg.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+
+	<button id="musicControl" onclick="toggleMusic()">🎵</button>
+
 	<div class="title">
 		bazi_rakesh💗
 	</div>
@@ -66,6 +73,28 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+		const audio = document.getElementById('bgMusic');
+		const musicButton = document.getElementById('musicControl');
+		
+		function toggleMusic() {
+			if (audio.paused) {
+				audio.play();
+				musicButton.textContent = '🎵';
+			} else {
+				audio.pause();
+				musicButton.textContent = '🔇';
+			}
+		}
+
+		// Start playing when user interacts with the page
+		document.addEventListener('click', function() {
+			if (audio.paused) {
+				audio.play();
+			}
+		}, { once: true });
+	</script>
 </body>
 
 </html>
